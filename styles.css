@@ -1,0 +1,22 @@
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 20px;
+}
+
+header h1 {
+    color: #000000;
+}
+
+button {
+    padding: 6px 12px;
+    background-color: #fefefe;
+    color: rgb(0, 0, 0);
+    border: 1px solid #000000;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #b7b4b3;
+}
