@@ -1,22 +1,131 @@
 body {
-    font-family: 'Times New Roman', Times, serif, sans-serif;
-    margin: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #8e00b9;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 header h1 {
-    color: #000000;
+    color: #ffffff;
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+    display: inline-block;
 }
 
 button {
-    padding: 6px 12px;
-    background-color: #fefefe;
-    color: rgb(0, 0, 0);
-    border: 1px solid #000000;
+    padding: 8px 20px;
+    background-color: #da783b;
+    color: white;
+    border: none;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 4px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
 }
 
 button:hover {
-    background-color: #b7b4b3;
+    background-color: #ec5008;
+}
+
+h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin-bottom: 20px;
+}
+
+#result {
+    min-height: 100px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+
+#result h3 {
+    color: #0066cc;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#result h4 {
+    color: #666;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+#result p {
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+#result ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#result li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#result li:last-child {
+    border-bottom: none;
+}
+
+
+#result .error {
+    color: #FF0000;
+    font-weight: bold;
 }

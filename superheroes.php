@@ -63,6 +63,39 @@ $superheroes = [
   ], 
 ];
 
+
+// Checking whether a search query was provided
+if (isset($_GET['query'])) {
+    
+    // Sanitizing the input
+    $query = htmlspecialchars($_GET['query'], ENT_QUOTES, 'UTF-8');
+    $found = false;
+    
+    // Looping through the superheroes array
+    foreach ($superheroes as $superhero) {
+
+        // Checking if query matches name or alias 
+        if (stripos($superhero['name'], $query) !== false || 
+            stripos($superhero['alias'], $query) !== false) {
+
+            // Show specific superhero details
+            echo "<h3>" . htmlspecialchars($superhero['alias']) . "</h3>";
+            echo "<h4>" . htmlspecialchars($superhero['name']) . "</h4>";
+            echo "<p>" . htmlspecialchars($superhero['biography']) . "</p>";
+            $found = true;
+            break; // Once the first match is found then stop
+        }
+    }
+    
+    // display error message if no superhero was found
+    if (!$found) {
+        echo "<p class='error'>SUPERHERO NOT FOUND</p>";
+    }
+    
+    return;
+}
+
+
 ?>
 
 <ul>
